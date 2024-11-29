@@ -1,7 +1,9 @@
 {
   "tasks": {
     "start": "deno run src/example.ts",
-    "test": "deno test --watch src/main_test.ts"
+    "test": "deno test --watch src/main_test.ts",
+    "build:npm": "deno run -A scripts/build_npm.ts 0.2.0; cp README.md npm/README.md",
+    "publish:npm": "cd npm; npm publish; cd ../"
   },
   "imports": {
     "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
