@@ -4,7 +4,7 @@ import { build, emptyDir } from "@deno/dnt";
 await emptyDir("./npm");
 
 await build({
-  entryPoints: ["./mod.ts"],
+  entryPoints: ["./src/main.ts"],
   outDir: "./npm",
   shims: {
     // see JS docs for overview and more options
@@ -12,16 +12,16 @@ await build({
   },
   package: {
     // package.json properties
-    name: "your-package",
+    name: "purify-ts-writer",
     version: Deno.args[0],
-    description: "Your package.",
+    description: "Writer monad compatible with purify-ts",
     license: "MIT",
     repository: {
       type: "git",
-      url: "git+https://github.com/username/repo.git",
+      url: "git+https://github.com/tjercus/purify-ts-writer.git",
     },
     bugs: {
-      url: "https://github.com/username/repo/issues",
+      url: "https://github.com/tjercus/purify-ts-writer/issues",
     },
   },
   postBuild() {
