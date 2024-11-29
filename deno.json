@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "start": "deno run src/example.ts",
+    "test": "deno test --watch src/main_test.ts"
+  },
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3",
+    "@std/assert": "jsr:@std/assert@^1.0.8"
+  }
+}
